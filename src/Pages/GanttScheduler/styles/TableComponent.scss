@@ -1,0 +1,307 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden; /* Prevent vertical scroll in most cases */
+}
+
+.custom-table {
+  /* width: 100%; */
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 20px 0;
+  font-size: 0.9em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 1200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-table td {
+  border: none;
+  padding: 0; 
+  position: relative;
+}
+
+.custom-table tr {
+  border: none;
+}
+
+.custom-table thead tr {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px 0px;
+  border: 0.5px solid #ddd;
+  text-align: center;
+  background-color: white;
+  word-break: break-all;
+  /* width: 80px; */
+}
+
+.custom-table th {
+  background-color: #f8f8f8;
+  color: var(--dark-text-color);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.custom-table th div{
+  text-wrap: wrap;
+  word-wrap: break-word;
+}
+
+.timeline-header {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.custom-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-table tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.custom-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.custom-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+/* Sticky column styles */
+.custom-table th:nth-child(1),
+.custom-table td:nth-child(1) {
+  border: 1px solid #ddd;
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  background-color: #f4f4f4;
+}
+
+.custom-table th:nth-child(2),
+.custom-table td:nth-child(2) {
+  border: 1px solid #ddd;
+  position: sticky;
+  left: 70px;
+  z-index: 3;
+  background-color: #f4f4f4;
+}
+
+.custom-table td:nth-child(1),
+.custom-table td:nth-child(2) {
+  color: var(--dark-text-color);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* .custom-table th:nth-child(3),
+.custom-table td:nth-child(3) {
+  border: 1px solid #ddd;
+  position: sticky;
+  left: 100px;
+  z-index: 3;
+  background-color: #f4f4f4;
+} */
+
+/* When the table is in collapsed mode, move the sticky columns and shift the entire table */
+.collapsed th:nth-child(1),
+.collapsed td:nth-child(1),
+.collapsed th:nth-child(2),
+.collapsed td:nth-child(2)
+{
+  transform: translateX(-510px);
+}
+
+.collapsed {
+  transform: translateX(-510px);
+}
+
+/* Button to toggle */
+.toggle-button {
+  position: fixed;
+  top: 160px;
+  left: 20px; 
+  z-index: 2;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: left 0.3s ease-in-out;
+}
+
+.collapsed + .toggle-button {
+  left: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .custom-table th:nth-child(1),
+  .custom-table td:nth-child(1),
+  .custom-table th:nth-child(2),
+  .custom-table td:nth-child(2){
+    left: 0;
+    z-index: 3;
+    transform: none;
+  }
+  
+  .collapsed th:nth-child(1),
+  .collapsed td:nth-child(1),
+  .collapsed th:nth-child(2),
+  .collapsed td:nth-child(2) {
+    transform: translateX(-100%);
+  }
+
+  .collapsed + .toggle-button {
+    left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-table th, 
+  .custom-table td {
+    padding: 10px;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 425px) {
+  .custom-table th, 
+  .custom-table td {
+    padding: 8px;
+    font-size: 1em;
+  }
+}
+
+
+.gantt-container {
+  // height: calc(100vh - 220px);
+  display: flex;
+  padding: 30px;
+  margin-left: 20px;
+  padding-left: 0px;
+  overflow-x: scroll;
+}
+
+.timeline-row {
+  display: flex;
+}
+
+.timeline-grid-row-cell {
+  flex-grow: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  border: 1px solid rgba(237, 241, 242, 0.20);
+  /* border-bottom: 1px solid rgba(237, 241, 242, 0.75); */
+  height: 100%;
+  width: 100px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+body[data-layout-mode="light"] .timeline-grid-row-cell {
+  color: #283655 !important;
+}
+
+.gantt-resource {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  padding-left: 8px;
+}
+
+
+body[data-layout-mode="dark"] {
+  .gantt-resource {
+    background-color:var(--bg-color)
+  }
+}
+
+body[data-layout-mode="light"] {
+  .gantt-resource {
+    background-color:#fff
+  }
+}
+
+
+.chat-timelime-items {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.chat-timeline-items-row {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.inactive-row {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #a0a0a0; /* Gray text color */
+  pointer-events: none; /* Disable interactions */
+  position: relative;
+  opacity: 0.15; /* Make the row look less prominent */
+  border: 1px solid #d3d3d3; /* Light border */
+  background-image: 
+    linear-gradient(45deg, rgba(160, 160, 160, 0.3) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(160, 160, 160, 0.3) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(160, 160, 160, 0.3) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(160, 160, 160, 0.3) 75%);
+  background-size: 20px 20px; /* Adjust size of crosshatch */
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px; /* Align cross lines */
+}
+
+.chart-inner{
+  position: relative;
+}
+
+.row-inner {
+  height: 100%;
+  display: flex;
+  align-items: center
+}
+
+.plan-item {
+  border-radius: 5px;
+}
+.plan-item-inner {
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;       /* Prevent text from wrapping to the next line */
+  overflow: hidden;          /* Hide the overflowed text */
+  text-overflow: ellipsis;   /* Add the ellipsis (...) */
+  max-width: 200px; 
+}
+
+.plan-item-progress-bar {
+  background-size: auto auto;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(255, 255, 255, 0.15) 10px, rgba(255, 255, 255, 0.15) 20px);
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+}
+
+.header .timeline-grid-row-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}

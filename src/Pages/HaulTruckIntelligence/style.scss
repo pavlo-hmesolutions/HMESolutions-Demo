@@ -1,0 +1,27 @@
+.haul-road-wrapper {
+  .ant-space {
+    .customSegmentBackground {
+      background-color: #c3c3c3;
+    }
+  }
+  .card {
+    .haulroad-summary-title {
+      color: var(--dark-text-color);
+    }
+  }
+}
+
+body[data-layout-mode="dark"] {
+  .haul-road-wrapper {
+    .ant-space {
+      .customSegmentBackground {
+        background-color: var(--dark-bg-color);
+      }
+    }
+    .card {
+      .haulroad-summary-title {
+        color: var(--light-text-color);
+      }
+    }
+  }
+}

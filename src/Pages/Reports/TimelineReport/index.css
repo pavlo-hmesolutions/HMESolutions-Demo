@@ -1,0 +1,36 @@
+body[data-layout-mode="light"] {
+
+
+    .ant-slider .ant-slider-track {
+        background-color: #000;
+    }
+
+    .ant-slider .ant-slider-handle {
+        background-color: #FFF;
+        border: 2px solid #000;
+    }
+
+    .ant-slider-mark-text {
+        color: #000 !important;
+    }
+}
+
+body[data-layout-mode="dark"] {
+
+    .ant-slider .ant-slider-track {
+        background-color: #ffffff;
+    }
+
+    .ant-slider-handle {
+        background-color: #FFF;
+        border: 2px solid #535E77;
+    }
+
+    .ant-slider-mark-text {
+        color: #ffffff !important;
+    }
+
+    .ant-slider:hover .ant-slider-track {
+        background-color: #B0B0B0;
+    }
+}

@@ -1,0 +1,295 @@
+.gantt-scheduler {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.aggregate-item{
+  min-height: 150px;
+  height: 150px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+
+  .equipment-status{
+    position: absolute;
+    left: 0;
+    top: 1px;
+    padding: 2px 16px;
+    margin-right: 0;
+    color: #ffffff;
+    border-radius: 0px 20px 20px 0px;
+    font-weight: 700;
+    font-size: 12px;
+  }
+}
+.aggregate-item-badge{
+  width: 80% !important;
+}
+.aggregate-item-badge .ant-badge-status-dot {
+  width: 100% !important;
+  border-radius: 10px !important;
+}
+.scheduler-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+.scheduler-tool {
+  display: flex;
+  flex-direction: row;
+}
+.timeline {
+  display: flex;
+}
+
+.timeline-slot {
+  flex: 1;
+  border-right: 1px solid #ccc;
+  text-align: center;
+  padding: 5px;
+}
+
+.scheduler-body {
+  display: flex;
+  flex-grow: 1;
+  overflow-x: auto;
+}
+
+.plan-list-container {
+  width: 20%;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.plan-list-container.light-mode {
+  background-color: #f9f9f9;
+  color: var(--dark-text-color);
+}
+
+.plan-list-container.dark-mode {
+  background-color: var(--dark-text-color);
+  color: #fff;
+  border-right: 1px solid #555;
+}
+
+.resources {
+  flex-grow: 1;
+  overflow-x: auto;
+  padding: 10px;
+  width: 80%;
+}
+
+.resources.light-mode {
+  background-color: #fff;
+  color: var(--dark-text-color);
+}
+
+.resources.dark-mode {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+.resource-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.resource-info {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.plans {
+  flex-grow: 1;
+  display: flex;
+}
+
+.plan-item {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+.plan-right {
+  height: calc(100vh - 220px);
+}
+
+body[data-layout-mode="dark"] {
+  .plan-left {
+    // width: calc(100% - 350px);
+    // margin-right: 20px;
+    height: 100%;
+  }
+  .plan-right {
+    // width: 350px;
+    flex: none;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    padding-top: 0px;
+    padding-bottom: 60px;
+    overflow-y: scroll;
+  }
+}
+
+body[data-layout-mode="light"] {
+  .plan-left {
+    // width: calc(100% - 350px);
+    height: 100%;
+  }
+  .plan-right {
+    // width: 350px;
+    flex: none;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    padding-top: 0px;
+    padding-bottom: 60px;
+    overflow-y: scroll;
+  }
+}
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+  .scheduler-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-content {
+    flex-direction: column;
+  }
+
+  .resources,
+  .plan-list-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .custom-table th, .custom-table td {
+    padding: 5px;
+  }
+
+  .scheduler-header {
+    align-items: center;
+  }
+  .react-datepicker-wrapper {
+    padding: 0 10px 10px 60px;
+  }
+  .scheduler-tool {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+
+  .toggle-theme-label {
+    margin-top: 10px;
+  }
+
+  .plan-list-container, .resources {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .plan-list {
+    height: max-content;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-table th, .custom-table td {
+    padding: 5px;
+  }
+
+  .scheduler-header {
+    align-items: center;
+  }
+  .react-datepicker-wrapper {
+    padding: 0 10px 10px 60px;
+  }
+  .scheduler-tool {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+
+  .toggle-theme-label {
+    margin-top: 10px;
+  }
+
+  .plan-list-container, .resources {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .plan-list {
+    height: max-content;
+  }
+}
+
+@media (max-width: 425px) {
+  .scheduler-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .scheduler-header {
+    align-items: center;
+  }
+  .react-datepicker-wrapper {
+    padding: 0 10px 10px 60px;
+  }
+  .scheduler-tool {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+  }
+  .toggle-button {
+    display: none;
+  }
+
+  .toggle-theme-label {
+    width: 100%;
+    text-align: left;
+  }
+
+  .custom-table th, .custom-table td {
+    padding: 3px;
+    font-size: 12px;
+  }
+
+  .plan-list-container, .resources {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .plan-list {
+    height: max-content;
+  }
+}

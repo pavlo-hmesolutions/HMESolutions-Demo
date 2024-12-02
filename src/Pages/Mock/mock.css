@@ -1,0 +1,48 @@
+.ant-spin-dot-item {
+  color: white !important;
+}
+
+.ant-spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-table {
+  background-color: var(--bg-color);
+  color: #a6b0cf;
+}
+
+.ant-table-cell-row-hover {
+  background-color: var(--bg-color) !important;
+  opacity: 0.95;
+}
+
+.ant-table-thead > tr > th {
+  background-color: var(--bg-color) !important;
+  color: #a6b0cf !important;
+}
+
+.ant-table-tbody > tr > td {
+  background-color: var(--bg-color);
+  color: #a6b0cf;
+}
+
+.ant-pagination-item,
+.ant-pagination-item-link {
+  background-color: var(--bg-color);
+  color: #a6b0cf;
+}
+
+.ant-pagination-item-active {
+  border-color: #a6b0cf;
+  background-color: #32384b;
+}
+
+.ant-pagination-item-active {
+  background-color: #32384b !important;
+}
+
+.ant-pagination-item {
+  background-color: var(--bg-color) !important;
+}

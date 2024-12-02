@@ -1,0 +1,250 @@
+:root {
+  --bg-color: #283655;
+  --dark-bg-color: #24314d;
+  --dark-text-color: #333;
+  --light-text-color: #fff;
+  --border-dark-default: #5f7197;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.auth-logo > img {
+  max-width: 250px;
+  width: 100%;
+}
+
+.mapboxgl-ctrl-scale,
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib-inner {
+  display: none !important;
+}
+
+body[data-layout-mode="dark"] {
+  .customSegmentBackground {
+    background-color: var(--bg-color);
+  }
+
+  .ant-segmented-item-label {
+    color: #c3cbe4;
+  }
+
+  .ant-segmented-item-selected {
+    .ant-segmented-item-label {
+      color: var(--dark-text-color);
+    }
+  }
+
+  /* .leaflet-layer,
+  .leaflet-control-zoom-in,
+  .leaflet-control-zoom-out,
+  .leaflet-control-attribution {
+    filter: invert(10%) hue-rotate(180deg) brightness(95%) contrast(90%);
+  } */
+}
+
+body[data-layout-mode="dark"] {
+  .dropDownArrow {
+    color: white !important;
+  }
+
+  .text-color {
+    color: white;
+  }
+
+  .table {
+    th,
+    td {
+      color: white !important;
+      font-size: 0.9rem;
+    }
+  }
+
+  .ant-select-item-option-selected {
+    background-color: #5e6c86 !important;
+    /*Customize background color of selected item*/
+    color: white !important;
+    /* Customize text color of selected item */
+    font-weight: normal !important;
+  }
+}
+
+body[data-layout-mode="light"] {
+  .dropDownArrow {
+    color: grey !important;
+  }
+
+  .table {
+    th,
+    td {
+      color: var(--dark-text-color) !important;
+      font-size: 0.9rem;
+    }
+  }
+
+  .text-color {
+    color: var(--dark-text-color);
+  }
+
+  .ant-select-item-option-selected {
+    background-color: #9a9a9a !important;
+    /* Customize background color of selected item */
+    color: white !important;
+    /* Customize text color of selected item */
+    font-weight: normal !important;
+  }
+
+  .customSegmentBackground {
+    background-color: #c3c3c3;
+  }
+}
+
+.activemarker {
+  background-image: url("./assets/images/equipment/check_active.png");
+  background-size: cover;
+  width: 86px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.animationmarker {
+  background-image: url("./assets/images/map/active_truck.png");
+  background-size: cover;
+  width: 50px;
+  height: 60px;
+  left: 0;
+  cursor: pointer;
+}
+
+.delaymarker {
+  background-image: url("./assets/images/equipment/check_delay.png");
+  background-size: cover;
+  width: 86px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.customSegmentLabel {
+  label {
+    margin-bottom: 0;
+  }
+}
+
+.ant-color-picker {
+  position: absolute;
+  z-index: 9999999;
+}
+
+.route-item {
+  color: white;
+  border-bottom: 1px dashed #787878;
+  cursor: pointer;
+}
+
+.route-item > i {
+  right: 25px;
+  font-size: 20px;
+  position: absolute;
+}
+
+.route-item:hover {
+  background-color: var(--bg-color);
+}
+
+.arrow-png {
+  width: 20px;
+  height: 20px;
+  background-image: url("./assets/images/right-arrow-svgrepo-com.svg");
+  /* Use absolute path here */
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform-origin: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body[data-layout-mode="light"]  .form-control {
+  color: var(--dark-text-color) !important;
+  background-color: transparent !important;
+}
+/* 
+.ant-switch {
+  background-color: var(--dark-bg-color);
+} */
+
+.ant-switch.ant-switch-checked {
+  /* background-color: var(--bg-color); */
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.ant-switch.ant-switch-checked:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* .main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden !important;
+}
+
+.page-content {
+  flex:1;
+  overflow-y: auto;
+}
+*/
+.footer {
+  display: none;
+}
+
+.form-control {
+  color: var(--dark-text-color) !important;
+}
+
+.form-control:disabled {
+  background-color: white !important;
+  cursor: not-allowed;
+}

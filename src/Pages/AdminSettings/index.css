@@ -1,0 +1,61 @@
+.standby-input,
+.standby-input:hover,
+.standby-input:focus,
+.standby-input:focus-visible,
+.standby-input:focus-within {
+    background-color: #1C263c;
+    color: white !important;
+    outline: none;
+}
+
+.ant-select {
+    width: 100px;
+}
+
+.ant-select-selector {
+    width: 100px;
+    background: #1C263c !important;
+}
+
+.ant-select-selection-item {
+    color: white;
+}
+
+.standby-input::placeholder {
+    color: white; 
+    opacity: 1; 
+  }
+
+  .ant-select-arrow svg {
+    fill: white;
+  }
+
+  body[data-layout-mode="light"] {
+    .state-reason-title {
+        color: var(--dark-text-color) !important;
+      }
+  
+    .table {
+  
+      th,
+      td {
+        color: var(--dark-text-color) !important;
+        font-size: 0.9rem;
+      }
+    }
+  
+    .text-color {
+      color: var(--dark-text-color);
+    }
+  }  
+.error-text-inline {
+  position: absolute;
+  color: #f46a6a;
+  font-size: 10px;
+  display: block;
+  white-space: nowrap;
+}
+
+.input-container {
+  position: relative;
+}

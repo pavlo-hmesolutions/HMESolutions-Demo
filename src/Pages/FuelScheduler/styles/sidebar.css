@@ -1,0 +1,100 @@
+.fuel-scheduler-sidebar {
+  width: 96%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  height: calc(100vh - 260px);
+}
+.fuel-scheduler-wrapper {
+  border-bottom: 1px solid #d9d9d985;
+}
+
+.fuel-sidebar-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: start;
+  padding: 0;
+  font-weight: 600;
+  width: 70%;
+}
+
+.equip-lists .task-chips:hover {
+  background-color: #ddd;
+}
+
+.fuel-section {
+  border-bottom: 1px solid #535e77;
+}
+
+.fuel-section .equip-lists {
+  gap: 20px 8px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+[data-layout-mode="dark"] {
+  .fuel-scheduler-sidebar {
+    color: #fff;
+    background-color: var(--bg-color);
+    border: 1px solid var(--bg-color);
+  }
+
+  .fuel-scheduler-wrapper {
+    border-bottom: 1px solid #d9d9d985;
+  }
+
+  .fuel-sidebar-title {
+    color: #fff;
+  }
+  .fuel-section .maintenance-show-btn {
+    cursor: pointer;
+    border: 1px solid #535e77;
+  }
+
+  .equip-lists .task-chips:hover {
+    background-color: #434f6b;
+  }
+}
+
+.equip-lists .task-chips {
+  cursor: pointer;
+  border: 1px solid #d9d9d985;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-width: 80px;
+}
+
+.fuel-section .task-chips {
+  border-radius: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #535e77;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+[data-layout-mode="dark"] .task-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: #24314d;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #596379;
+  border-radius: 6px;
+}
+
+.message-board .right-board-topic {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.message-board .show-more-btn {
+  cursor: pointer;
+}

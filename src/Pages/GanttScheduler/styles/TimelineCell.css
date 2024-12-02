@@ -1,0 +1,30 @@
+  
+  .plan {
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+
+  body[data-layout-mode="dark"] .plan-item {
+    border: 1px solid white;
+  }
+  body[data-layout-mode="light"] .plan-item {
+    border: 1px solid gray;
+  }
+
+  body[data-layout-mode="dark"] .plan-item-tooltip-content{
+    /* background-color: var(--dark-bg-color);
+    color: white;
+    margin: -6px -8px;
+    padding: 6px 8px; */
+  }
